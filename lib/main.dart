@@ -50,10 +50,14 @@ class _HomeState extends State<Home> {
           body: TabBarView(children: [
             Column(
               children: [
+                Card(
+                  child: Text("mi primer card"),
+                  color: Colors.amberAccent,
+                ),
                 Text(lorem(paragraphs: 2, words: 60)),
                 Container(
-                  width: 500,
-                  height: 500,
+                  width: 400,
+                  height: 400,
                   child: Image.asset('imagenes/persona1.jpeg'),
                 )
               ],
