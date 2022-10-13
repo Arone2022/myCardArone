@@ -25,10 +25,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text("imagnes cargadas"),
-      ),
-    );
+    return DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            bottom: TabBar(
+              tabs: [Tab(text: "facebook"), Text("twiter"), Text("instagrama")],
+            ),
+          ),
+          body: TabBarView(
+              children: [Text("hola1"), Text("hola2"), Text("hola3")]),
+        ));
   }
 }
