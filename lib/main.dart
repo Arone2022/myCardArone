@@ -31,7 +31,20 @@ class _HomeState extends State<Home> {
         child: Scaffold(
           appBar: AppBar(
             bottom: TabBar(
-              tabs: [Tab(text: "facebook"), Text("twiter"), Text("instagrama")],
+              tabs: [
+                Tab(
+                  text: "facebook",
+                  icon: Icon(Icons.facebook),
+                ),
+                Tab(
+                  text: "twiter",
+                  icon: Icon(Icons.wb_twilight),
+                ),
+                Tab(
+                  text: "instagram",
+                  icon: Icon(Icons.insert_page_break_rounded),
+                ),
+              ],
             ),
           ),
           body: TabBarView(children: [
@@ -55,7 +68,7 @@ class _HomeState extends State<Home> {
                 )
               ],
             ),
-            Text("hola3")
+            Text(lorem(paragraphs: 5, words: 200))
           ]),
         ));
   }
